@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import GlobalStyles from "./styles/GlobalStyles";
 
 const H1 = styled.h1`
   font-size: 30px;
@@ -12,7 +13,7 @@ const Button = styled.button`
   font-weight: 500;
   border: none;
   border-radius: 7px;
-  background-color: purple;
+  background-color: var(--color-brand-800);
   color: white;
   margin: 10px;
 `;
@@ -30,12 +31,15 @@ const StyledApp = styled.div`
 
 function App() {
   return (
-    <StyledApp>
-      <H1>The wild oasis</H1>
-      <Button>Check-in</Button>
-      <Button>Check-out</Button>
-      <Input maxLength={2} type="number" placeholder="Number of gust" />
-    </StyledApp>
+    <>
+      <GlobalStyles />
+      <StyledApp>
+        <H1>The wild oasis</H1>
+        <Button>Check-in</Button>
+        <Button>Check-out</Button>
+        <Input maxLength={2} type="number" placeholder="Number of guests" />
+      </StyledApp>
+    </>
   );
 }
 
